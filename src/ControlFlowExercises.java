@@ -1,8 +1,9 @@
 import java.util.Scanner;
+import java.util.*;
 
 public class ControlFlowExercises {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
 //  1. Loops Basics
 //  a. While
@@ -72,9 +73,69 @@ public class ControlFlowExercises {
 
 
 //   3. Display table of powers
-        Scanner scanner = new Scanner(System.in);
+//        Formatter fmt;
+//        Scanner scanner = new Scanner(System.in);
+//        String input1 = "";
+//
+//        do {
+//            System.out.print("Enter an integer: ");
+//            int userInput = scanner.nextInt();
+//
+//            int i;
+//            System.out.println("number | squared | cubed");
+//            for (i = 1; i <= userInput; i++) {
+//                fmt = new Formatter();
+//
+//                fmt.format("%4d  | %4d  | %4d", i, i * i, i * i * i);
+//                System.out.println(fmt);
+//            }
+//            System.out.print("Would you like to continue? Enter Yes or No: ");
+//            input1 = scanner.next().toLowerCase();
+//
+//        } while (input1.equals("yes"));
 
-        System.out.print("Enter an integer: ");
+
+//    Problem 4
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your numerical grade? (1 - 100): ");
+        int userInput = scanner.nextInt();
+
+//function gradeChecker(userInput) {
+        int counter = 0;
+
+            if (userInput <= 59) {
+                counter++;
+            }
+            if (userInput <= 66) {
+                counter++;
+            }
+            if (userInput <= 79) {
+                counter++;
+            }
+            if (userInput <= 87) {
+                counter++;
+            }
+            if (userInput <= 100) {
+                counter++;
+            }
+
+            switch (counter) {
+                case 1:
+                    System.out.println("Your grade is an F");
+                    break;
+                case 2:
+                    System.out.println("Your grade is a D");
+                    break;
+                case 3:
+                    System.out.println("Your grade is a C");
+                    break;
+                case 4:
+                    System.out.println("Your grade is a B");
+                    break;
+                case 5:
+                    System.out.println("Your grade is an A");
+                    break;
+            }
 
 
 
