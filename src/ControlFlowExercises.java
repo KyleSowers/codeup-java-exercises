@@ -97,25 +97,30 @@ public class ControlFlowExercises {
 
 //    Problem 4
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your numerical grade? (1 - 100): ");
-        int userInput = scanner.nextInt();
+        String input2 = "";
+//        System.out.print("Enter your numerical grade? (1 - 100): ");
+//        int userInput = scanner.nextInt();
 
-//function gradeChecker(userInput) {
-        int counter = 0;
 
-            if (userInput <= 59) {
+        do {
+            System.out.print("Enter your numerical grade? (1 - 100): ");
+            int userInput = scanner.nextInt();
+
+            int counter = 0;
+
+            if (userInput >= 0) {
                 counter++;
             }
-            if (userInput <= 66) {
+            if (userInput >= 60) {
                 counter++;
             }
-            if (userInput <= 79) {
+            if (userInput >= 67) {
                 counter++;
             }
-            if (userInput <= 87) {
+            if (userInput >= 80) {
                 counter++;
             }
-            if (userInput <= 100) {
+            if (userInput >= 88) {
                 counter++;
             }
 
@@ -137,7 +142,9 @@ public class ControlFlowExercises {
                     break;
             }
 
+            System.out.print("Would you like to continue? Enter Yes or No: ");
+            input2 = scanner.next().toLowerCase();
 
-
+        } while (input2.equals("yes"));
     }
 }
