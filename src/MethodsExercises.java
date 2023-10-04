@@ -6,6 +6,7 @@ public class MethodsExercises {
 
     public static void main(String[] args) {
 
+//  Problem 1 ad/subtract/multiply/divide/modulus
         System.out.println(adding(3, 4));
 
         System.out.println(subtract(2, 9));
@@ -16,28 +17,25 @@ public class MethodsExercises {
 
         System.out.println(modulus(9, 3));
 
-//        System.out.println(divide(10, 0));
+//  Divide by 0 for example
+//      System.out.println(divide(10, 0));
 
-//        The ChatGPT method for problem 2
-//        int minvalue = 1;
-//        int maxValue = 9;
-//        int userNumber = getInteger(1, 9);
-//        System.out.println("You entered a valid number: " + userNumber);
+//  The ChatGPT method for problem 2
+//      int minvalue = 1;
+//      int maxValue = 9;
+//      int userNumber = getInteger(1, 9);
+//      System.out.println("You entered a valid number: " + userNumber);
 
-//        Class made version problem 2
-//        System.out.println(getUserInput(1, 9));
+//  Class made version problem 2
+//      System.out.println(getUserInput(1, 9));
 
-        System.out.print(factorial());
-//        System.out.print("Would you like to calculate a factorial again?: ");
-//        String userAnswer = scanner.next().toLowerCase();
-//        if (userAnswer.equals("yes")) {
-//            System.out.print("%n");
-//            System.out.println(factorial());
-//        }
+//  Problem 3
+//      System.out.print(factorial());
 
+//  Problem 4
+        System.out.print(dice());
 
     }
-
 
 
 
@@ -66,10 +64,8 @@ public class MethodsExercises {
     public static int modulus(int num, int num2) {
         return num % num2;
     }
-//    factorial number
 
-
-//        Problem 2 userInteger min/max
+//  Problem 2 userInteger min/max
 
 //        Alt version: ChatGPT Solution (Learning a do/while with an additional while inside
 //        public static int getInteger(int min, int max) {
@@ -108,24 +104,33 @@ public class MethodsExercises {
 //            }
 //        }
 
-    //    Problem 3
-    public static long factorial() {
+//  Problem 3
+//    public static long factorial() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Provide a number between 1 and 10. You will receive the factorial of that number: ");
+//        int userFactorial = scanner.nextInt();
+//        int factNum = 1;
+//        if (userFactorial < 1 || userFactorial > 10) {
+//            System.out.println("Invalid number entered, please try again");
+//            return factorial();
+//        }
+//        for (int i = 1; i <= userFactorial; i++) {
+//            factNum *= i;
+//        }
+//        System.out.println("Thanks for the factorial number: " + userFactorial + " Which equals: ");
+//        return factNum;
+//
+//
+//        }
+
+//  Problem 4
+        public static int dice() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Provide a number between 1 and 10. You will receive the factorial of that number: ");
-        int userFactorial = scanner.nextInt();
-        int factNum = 1;
-        if (userFactorial < 1 || userFactorial > 10) {
-            System.out.println("Invalid number entered, please try again");
-            return factorial();
+            System.out.print("Enter the number of sides for a pair of dice: ");
+            int diceSides = scanner.nextInt();
+            return diceSides;
         }
-        for (int i = 1; i <= userFactorial; i++) {
-            factNum *= i;
-        }
-        System.out.println("Thanks for the factorial number: " + userFactorial + " Which equals: ");
-        return factNum;
 
-
-        }
     }
 
 
