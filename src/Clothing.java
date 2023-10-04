@@ -5,7 +5,7 @@ public class Clothing {
     public String size;
 
     public String sayClothesType() {
-        return String.format("The %s is %s, in the size %s.%n", type, color, size);
+        return String.format("The %s is %s, in the size %s.", type, color, size);
     }
 
 
