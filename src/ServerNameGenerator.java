@@ -68,5 +68,7 @@ public class ServerNameGenerator {
 
         System.out.printf("You are a %s %s!%n", randomAdjective(adjectivesArray), randomNoun(nounArray));
 
+
+
     }
 }

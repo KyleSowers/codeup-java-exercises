@@ -43,6 +43,13 @@ public class Input {
         return userInteger;
     }
 
+//    For import to MoviesApplication.js file
+    public int getInt2() {
+        System.out.println("Enter your choice: ");
+        int userInteger = scanner.nextInt();
+        return userInteger;
+    }
+
     public double getDouble(double min, double max) {
         System.out.printf("Provide a decimal number between %s and %s here: %n", min, max);
         double userDouble = scanner.nextDouble();
