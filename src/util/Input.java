@@ -39,8 +39,15 @@ public class Input {
 
     public int getInt() {
         System.out.println("Provide a single number here: ");
-        int userInteger = scanner.nextInt();
-        return userInteger;
+        try {
+            String userString = getString();
+            int isAInteger = Integer.valueOf(userString);
+            return isAInteger;
+        } catch (NumberFormatException e) {
+            System.out.println("This did not appear to be a number");
+            e.printStackTrace();
+            return 0;
+        }
     }
 
 //    For import to MoviesApplication.js file
@@ -52,13 +59,19 @@ public class Input {
 
     public double getDouble(double min, double max) {
         System.out.printf("Provide a decimal number between %s and %s here: %n", min, max);
-        double userDouble = scanner.nextDouble();
-        if (userDouble >= min && userDouble <= max) {
-            return userDouble;
-        } else {
-            return getDouble(min, max);
+        try {
+            String userInput = getString();
+            double userDouble = Double.valueOf(userInput);
+            if (userDouble >= min && userDouble <= max) {
+                return userDouble;
+            } else {
+                return getDouble(min, max);
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("This did not appear to be a number");
+            e.printStackTrace();
+            return 0;
         }
-
     }
 
     public double getDouble() {
